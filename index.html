@@ -1,10 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Mitchell Endicott Portfolio</title>
-<style>:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* Layout: a single column of project "sheets". Each sheet pairs a photo area with an engineering-drawing title block (project, role, tools, result). */
@@ -72,17 +68,45 @@
   header { display: flex; flex-direction: column; gap: 16px; padding-bottom: 40px; border-bottom: 1px solid var(--line); }
   h1 {
     margin: 0;
-    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-size: clamp(2rem, 5.5vw, 3.25rem);
     line-height: 1.05;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
     text-wrap: balance;
   }
   .lead { margin: 0; max-width: 62ch; font-size: 1.125rem; color: var(--muted); }
-  .contact { display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: 0.9375rem; padding-top: 8px; }
-  .contact div { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
-  .contact .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-  .contact .v { overflow-wrap: anywhere; }
+  .wholine { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
+  .role { margin: 0; font-size: 1.25rem; font-weight: 500; }
+  .loc { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px; }
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 8px 16px;
+    background: transparent;
+  }
+  a.btn:hover { background: var(--accent); color: var(--surface); }
+  .btn.pending { color: var(--muted); border: 1px dashed var(--line); cursor: default; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .chips li { font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--line); background: var(--slot); padding: 2px 8px; }
+
+  .how { grid-column: 1 / -1; border-top: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .how-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 16px; align-items: start; }
+  .how-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .how-col h4 { margin: 0; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+  .steps li { position: relative; border: 1px solid var(--line); background: var(--slot); padding: 8px 12px; font-size: 0.9375rem; text-align: center; overflow-wrap: anywhere; }
+  .steps li + li::before { content: "\2193"; content: "\2193" / ""; position: absolute; top: -22px; left: 50%; transform: translateX(-50%); line-height: 20px; color: var(--muted); font-family: var(--font-mono); }
+  .steps li.out { border-color: var(--accent); }
+  .how-arrow { align-self: center; color: var(--muted); font-family: var(--font-mono); }
+  .how-arrow::before { content: "\2192"; }
 
   h2 {
     margin: 0;
@@ -183,21 +207,27 @@
     .sheet { grid-template-columns: minmax(0, 1fr); }
     .block { border-left: 0; border-top: 1px solid var(--line); }
     .row { grid-template-columns: 6.5rem minmax(0, 1fr); }
+    .how-grid { grid-template-columns: minmax(0, 1fr); }
+    .how-arrow { justify-self: center; }
+    .how-arrow::before { content: "\2193"; }
   }
 </style>
 
-</head>
-<body>
 <div class="wrap">
   <header>
-    <span class="eyebrow">Mechanical engineering portfolio</span>
+    <span class="eyebrow">Mechanical &amp; Systems Engineering Portfolio</span>
     <h1>Mitchell Endicott</h1>
-    <p class="lead">I build things, from an RC aircraft to houses, sheds and cabinets, and I write code to solve practical problems.</p>
-    <div class="contact">
-      <div><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/mitchellendicott">linkedin.com/in/mitchellendicott</a></span></div>
-      <div><span class="k">GitHub</span><span class="v"><a href="https://github.com/MitchellEndicott">github.com/MitchellEndicott</a></span></div>
-      <div><span class="k">Email</span><span class="v">MitchellE74@hotmail.com</span></div>
+    <div class="wholine">
+      <p class="role">Engineering Student</p>
+      <span class="loc">Spokane, WA</span>
     </div>
+    <div class="links">
+      <span class="btn pending" aria-disabled="true" title="Resume coming soon">Resume</span>
+      <a class="btn" href="https://github.com/MitchellEndicott" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mitchellendicott" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:MitchellE74@hotmail.com" title="MitchellE74@hotmail.com">Email</a>
+    </div>
+    <p class="lead">I build things, from an RC aircraft to houses, sheds and cabinets, and I write code to solve practical problems.</p>
   </header>
 
   <main class="projects">
@@ -240,48 +270,10 @@
         </div>
         <dl>
           <div class="row"><dt>Type</dt><dd>Group project</dd></div>
-          <div class="row"><dt>My role</dt><dd>Designed the fuselage and nose, modeled the full aircraft in SolidWorks, and helped test the electrical components</dd></div>
+          <div class="row"><dt>My role</dt><dd>Designed and modeled the aircraft fuselage and nose in SolidWorks, contributed to the full aircraft assembly, and helped test the electrical propulsion system.</dd></div>
           <div class="row"><dt>Tools and methods</dt><dd>SolidWorks, LoggerPro, 3D printing</dd></div>
           <div class="row"><dt>Result</dt><dd>Completed the airplane build. It did not take off in testing.</dd></div>
           <div class="row"><dt>Redesign</dt><dd>Make the funnel in the fuselage more gradual. The steep funnel created back pressure.</dd></div>
-        </dl>
-      </div>
-    </article>
-
-    <article class="sheet">
-      <div class="media">
-        <figure class="fig">
-          <button type="button" class="frame main" data-full="images/house1-front.jpg" data-cap="House 1, front">
-            <img src="images/house1-front.jpg" style="object-position: left center" alt="Front of a single-story house with wood siding, stone columns and a three-car garage" loading="lazy">
-          </button>
-          <figcaption>House 1, front</figcaption>
-        </figure>
-        <div class="thumbs">
-          <figure class="fig">
-            <button type="button" class="frame thumb" data-full="images/house1-rear.jpg" data-cap="House 1, rear covered patio">
-              <img src="images/house1-rear.jpg" alt="Rear covered patio of the same house with stone columns and large windows" loading="lazy">
-            </button>
-            <figcaption>House 1, rear patio</figcaption>
-          </figure>
-          <figure class="fig">
-            <button type="button" class="frame thumb" data-full="images/house2-front.jpg" data-cap="House 2, front">
-              <img src="images/house2-front.jpg" alt="Front of a second house with stone accents, gabled rooflines and a three-car garage" loading="lazy">
-            </button>
-            <figcaption>House 2, front</figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="block">
-        <div class="block-head">
-          <span class="eyebrow">Structures and fabrication</span>
-          <h3>Construction and Woodworking</h3>
-          <p>Worked alongside my dad building houses, sheds, wardrobes, cabinets and bed frames.</p>
-        </div>
-        <dl>
-          <div class="row"><dt>Type</dt><dd>Hands-on construction</dd></div>
-          <div class="row"><dt>Builds</dt><dd>Houses, sheds, wardrobes, cabinets, bed frames</dd></div>
-          <div class="row"><dt>My role</dt><dd>Construction assistant, working with my dad</dd></div>
-          <div class="row"><dt>Tools and methods</dt><dd>A variety of construction tools</dd></div>
         </dl>
       </div>
     </article>
@@ -339,6 +331,64 @@ Day: Saturday
           <div class="row"><dt>Code</dt><dd><a href="https://github.com/MitchellEndicott/Smart-Track">github.com/MitchellEndicott/Smart-Track</a></dd></div>
         </dl>
       </div>
+      <div class="how">
+        <span class="eyebrow">How it works</span>
+        <div class="how-grid">
+          <div class="how-col">
+            <h4>Input</h4>
+            <ol class="steps"><li>Athlete events</li><li>Training goals</li><li>PRs</li><li>Weekly availability</li></ol>
+          </div>
+          <span class="how-arrow" aria-hidden="true"></span>
+          <div class="how-col">
+            <h4>Process</h4>
+            <ol class="steps"><li>Validate inputs</li><li>Select workouts</li><li>Scale lifting loads</li><li>Schedule workouts</li><li>Handle missed sessions</li></ol>
+          </div>
+          <span class="how-arrow" aria-hidden="true"></span>
+          <div class="how-col">
+            <h4>Output</h4>
+            <ol class="steps"><li class="out">Customized 7-day training plan</li></ol>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="sheet">
+      <div class="media">
+        <figure class="fig">
+          <button type="button" class="frame main" data-full="images/house1-front.jpg" data-cap="House 1, front">
+            <img src="images/house1-front.jpg" style="object-position: left center" alt="Front of a single-story house with wood siding, stone columns and a three-car garage" loading="lazy">
+          </button>
+          <figcaption>House 1, front</figcaption>
+        </figure>
+        <div class="thumbs">
+          <figure class="fig">
+            <button type="button" class="frame thumb" data-full="images/house1-rear.jpg" data-cap="House 1, rear covered patio">
+              <img src="images/house1-rear.jpg" alt="Rear covered patio of the same house with stone columns and large windows" loading="lazy">
+            </button>
+            <figcaption>House 1, rear patio</figcaption>
+          </figure>
+          <figure class="fig">
+            <button type="button" class="frame thumb" data-full="images/house2-front.jpg" data-cap="House 2, front">
+              <img src="images/house2-front.jpg" alt="Front of a second house with stone accents, gabled rooflines and a three-car garage" loading="lazy">
+            </button>
+            <figcaption>House 2, front</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-head">
+          <span class="eyebrow">Structures and fabrication</span>
+          <h3>Construction and Woodworking</h3>
+          <p>Worked alongside my dad building houses, sheds, wardrobes, cabinets and bed frames.</p>
+        </div>
+        <dl>
+          <div class="row"><dt>Type</dt><dd>Hands-on construction</dd></div>
+          <div class="row"><dt>Builds</dt><dd>Houses, sheds, wardrobes, cabinets, bed frames</dd></div>
+          <div class="row"><dt>My role</dt><dd>Construction assistant, working with my dad</dd></div>
+          <div class="row"><dt>Tools</dt><dd><ul class="chips"><li>Circular saw</li><li>Table saw</li><li>Miter saw</li><li>Drill/driver</li><li>Impact driver</li><li>Nail gun</li></ul></dd></div>
+          <div class="row"><dt>Skills</dt><dd><ul class="chips"><li>Framing</li><li>Measuring and layout</li><li>Cabinetry</li><li>Finishing</li></ul></dd></div>
+        </dl>
+      </div>
     </article>
   </main>
 </div>
@@ -374,5 +424,5 @@ Day: Saturday
     });
   })();
 </script>
-</body>
-</html>
+
+</body></html>
