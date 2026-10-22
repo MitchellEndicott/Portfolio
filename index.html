@@ -1,10 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Mitchell Endicott Portfolio</title>
-<style>:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* Layout: a single column of project "sheets". Each sheet pairs a photo area with an engineering-drawing title block (project, role, tools, result). */
@@ -218,8 +214,6 @@
   }
 </style>
 
-</head>
-<body>
 <div class="wrap">
   <header>
     <span class="eyebrow">Mechanical &amp; Systems Engineering Portfolio</span>
@@ -366,6 +360,46 @@ Day: Saturday
     <article class="sheet">
       <div class="media">
         <figure class="fig">
+<pre class="term" tabindex="0" style="max-height: none" aria-label="List of the 15 embedded systems projects">01-1  LED flash counts
+01-2  Two Hearts
+02-1  Three Rates, One Heart
+03-1  Letter counter
+04-1  Letter counter, seven-segment display
+05-1  Servo controller
+05-2  LED dimmer
+07-1  Tap detector (SPI)
+08-1  Digital compass (I²C)
+08-2  Tap detector (I²C)
+09-1  Analog temperature logger
+10-1  Temperature alert
+10-2  Night light
+11-1  Tap temperature logger
+12-1  Tap temperature logger (I²C sensor)</pre>
+          <figcaption>The 15 project folders</figcaption>
+        </figure>
+      </div>
+      <div class="block">
+        <div class="block-head">
+          <span class="eyebrow">Firmware</span>
+          <h3>Embedded Systems</h3>
+          <p>Fifteen C programs for the nRF52840 that read sensors and control LEDs, a servo and a display.</p>
+        </div>
+        <dl>
+          <div class="row"><dt>Type</dt><dd>Class projects (15)</dd></div>
+          <div class="row"><dt>Platform</dt><dd>Nordic nRF52840 DK, Zephyr RTOS</dd></div>
+          <div class="row"><dt>Language</dt><dd>C</dd></div>
+          <div class="row"><dt>Interfaces</dt><dd><ul class="chips"><li>GPIO</li><li>PWM</li><li>ADC</li><li>I²C</li><li>SPI</li></ul></dd></div>
+          <div class="row"><dt>Parts</dt><dd><ul class="chips"><li>ADXL345 accelerometer</li><li>HMC5883L compass</li><li>TMP36</li><li>TMP102</li><li>Photointerrupter</li><li>Light sensor</li><li>Servo</li><li>Seven-segment display</li></ul></dd></div>
+          <div class="row"><dt>Highlight</dt><dd>Tap Temperature Logger: detects single and double taps on an accelerometer over SPI, reads a temperature sensor over I²C, queues the readings and logs the average.</dd></div>
+          <div class="row"><dt>Code</dt><dd><a href="https://github.com/MitchellEndicott/Embedded-Systems" target="_blank" rel="noopener">github.com/MitchellEndicott/Embedded-Systems</a></dd></div>
+          <div class="row"><dt>Demos</dt><dd><a href="https://www.youtube.com/playlist?list=PLarJjJm6EqUs" target="_blank" rel="noopener">youtube.com/playlist?list=PLarJjJm6EqUs</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="sheet">
+      <div class="media">
+        <figure class="fig">
           <button type="button" class="frame main" data-full="images/house1-front.jpg" data-cap="House 1, front">
             <img src="images/house1-front.jpg" style="object-position: left center" alt="Front of a single-story house with wood siding, stone columns and a three-car garage" loading="lazy">
           </button>
@@ -435,5 +469,5 @@ Day: Saturday
     });
   })();
 </script>
-</body>
-</html>
+
+</body></html>
