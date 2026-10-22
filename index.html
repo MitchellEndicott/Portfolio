@@ -1,6 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mitchell Endicott Portfolio</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<style>:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   /* Layout: a single column of project "sheets". Each sheet pairs a photo area with an engineering-drawing title block (project, role, tools, result). */
@@ -94,6 +98,7 @@
   a.btn:hover { background: var(--accent); color: var(--surface); }
   .btn.pending { color: var(--muted); border: 1px dashed var(--line); cursor: default; }
 
+  .interests { display: flex; flex-direction: column; gap: 10px; padding-top: 8px; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
   .chips li { font-family: var(--font-mono); font-size: 12px; border: 1px solid var(--line); background: var(--slot); padding: 2px 8px; }
 
@@ -213,6 +218,8 @@
   }
 </style>
 
+</head>
+<body>
 <div class="wrap">
   <header>
     <span class="eyebrow">Mechanical &amp; Systems Engineering Portfolio</span>
@@ -222,12 +229,16 @@
       <span class="loc">Spokane, WA</span>
     </div>
     <div class="links">
-      <span class="btn pending" aria-disabled="true" title="Resume coming soon">Resume</span>
+      <a class="btn" href="Mitchell_Endicott_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a class="btn" href="https://github.com/MitchellEndicott" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/mitchellendicott" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="mailto:MitchellE74@hotmail.com" title="MitchellE74@hotmail.com">Email</a>
     </div>
     <p class="lead">I build things, from an RC aircraft to houses, sheds and cabinets, and I write code to solve practical problems.</p>
+    <div class="interests">
+      <span class="eyebrow">Areas of interest</span>
+      <ul class="chips"><li>Mechanical Design</li><li>Systems Engineering</li><li>Aerospace Engineering</li><li>Robotics</li><li>Controls</li><li>Product Development</li><li>Additive Manufacturing</li><li>Embedded Systems</li></ul>
+    </div>
   </header>
 
   <main class="projects">
@@ -424,5 +435,5 @@ Day: Saturday
     });
   })();
 </script>
-
-</body></html>
+</body>
+</html>
